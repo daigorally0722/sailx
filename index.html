@@ -811,6 +811,39 @@
       .ss-slide-title { font-size: clamp(22px, 6vw, 30px); }
     }
 
+    /* ─── GREETING ─── */
+    #greeting { border-top: 1px solid rgba(0,0,0,.05); }
+    .greeting-inner { max-width: 1000px; margin: 0 auto; }
+    .greeting-wrap {
+      display: grid; grid-template-columns: 240px 1fr; gap: 64px; align-items: flex-start;
+    }
+    .greeting-photo { text-align: center; }
+    .greeting-photo-img {
+      width: 200px; height: 240px; margin: 0 auto 20px;
+      border-radius: 12px; object-fit: cover; object-position: center top;
+      display: block;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    }
+    .greeting-name { font-size: 18px; font-weight: 800; color: #1a1a1a; letter-spacing: 1px; margin-bottom: 4px; }
+    .greeting-title { font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+    .greeting-body { border-left: 3px solid var(--accent); padding-left: 28px; }
+    .greeting-text {
+      font-size: 15px; color: rgba(0,0,0,.6); line-height: 2.1;
+      font-weight: 300; margin-bottom: 24px;
+    }
+    .greeting-text:last-of-type { margin-bottom: 36px; }
+    .greeting-sig {
+      font-size: 13px; color: rgba(0,0,0,.45); line-height: 1.8;
+      letter-spacing: 1px;
+    }
+    .greeting-sig strong { display: block; font-size: 16px; font-weight: 700; color: #1a1a1a; margin-top: 4px; }
+    @media (max-width: 768px) {
+      .greeting-wrap { grid-template-columns: 1fr; gap: 36px; }
+      .greeting-photo-img { width: 140px; height: 168px; }
+      .greeting-body { padding-left: 18px; }
+      .greeting-text { font-size: 14px; }
+    }
+
     /* ─── ライトセクション共通 ─── */
     .lt {
       background: var(--lt-bg) !important;
@@ -1176,45 +1209,38 @@
     </div>
     <div class="statement-right rv d2">
       <p>SAILXは、英会話・中国語・企業向けAI研修の三軸で、個人とビジネスのグローバル競争力を最大化します。画一的な教育ではなく、一人ひとりの目標に応じた完全オーダーメイドの指導が私たちの強みです。</p>
-      <div class="statement-stats rv d3">
-        <div class="stat-box">
-          <div class="stat-val">500<sup>+</sup></div>
-          <div class="stat-lbl">累計受講生</div>
+    </div>
+  </div>
+</section>
+
+<!-- GREETING -->
+<section id="greeting" class="lt">
+  <div class="greeting-inner rv">
+    <div class="label">Message</div>
+    <h2 class="sec-title" style="font-size:clamp(28px,4vw,52px); margin-bottom:48px;">代表者挨拶</h2>
+    <div class="greeting-wrap">
+      <div class="greeting-photo">
+        <img src="assets/president.jpg" alt="代表 金澤太良" class="greeting-photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="greeting-photo-placeholder" style="display:none;width:200px;height:240px;margin:0 auto 20px;border:2px dashed rgba(0,0,0,.15);border-radius:12px;background:#f5f3ef;align-items:center;justify-content:center;"><span style="font-size:13px;color:rgba(0,0,0,.3);letter-spacing:2px;">写真</span></div>
+        <div class="greeting-name-block">
+          <div class="greeting-name">金澤 太良</div>
+          <div class="greeting-title">SAILX 代表</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-val">98<sup>%</sup></div>
-          <div class="stat-lbl">満足度</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-val">4</div>
-          <div class="stat-lbl">専門サービス</div>
+      </div>
+      <div class="greeting-body">
+        <p class="greeting-text">私のキャリアは、日本の美容業界から始まりました。海外で戦う現場に立つほど、強く感じたことがあります。世界に誇れる日本の価値が、言葉の壁ひとつで、正しく相手に届いていない——。</p>
+        <p class="greeting-text">日本を訪れる外国人は年々増え続け、その多くが日本の美容やおもてなしを心から楽しみにしています。完璧な言葉はいりません。片言でも「伝えよう」とする気持ちは、必ず相手に届く。海外で誰かが片言の日本語で話しかけてくれたとき、私たちが嬉しくなるように。その一歩を後押ししたい。それが、私たちの原点です。</p>
+        <p class="greeting-text">そしていま、時代はもう一段、大きく動いています。AIの波は、規模の大小に関係なく、あらゆる事業者の足元を変えつつあります。この変化に、置いていかれる人を一人でも減らしたい。新しい力を、誰もが使いこなせる形にして届けたい。</p>
+        <p class="greeting-text">言葉も、テクノロジーも、私にとっては同じことです。人の持つ本当の価値を、壁を越えて、まっすぐ相手に届けること。そのために私たちは在ります。</p>
+        <p class="greeting-text">社名のSAILには、航海の意味を込めました。海は果てしなく広く、船はどの方向へも舵を切れる。SAILXのXは、掛け合わせから生まれる無限の可能性と、人と人が出会う交差点。私たちは業界にも、国境にも縛られません。社会に本当に必要とされることを、私たちにしかできない形で。終わりのない航海を、これからも進んでいきます。</p>
+        <div class="greeting-sig">
+          株式会社SAILX
+          <strong>代表取締役　金澤 太良</strong>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- NUMBERS -->
-<div id="numbers">
-  <div class="num-grid">
-    <div class="num-item rv">
-      <div class="num-val"><span data-t="500">0</span><span class="num-unit">+</span></div>
-      <div class="num-lbl">累計受講生</div>
-    </div>
-    <div class="num-item rv d1">
-      <div class="num-val"><span data-t="4">0</span></div>
-      <div class="num-lbl">専門サービス</div>
-    </div>
-    <div class="num-item rv d2">
-      <div class="num-val"><span data-t="98">0</span><span class="num-unit">%</span></div>
-      <div class="num-lbl">満足度</div>
-    </div>
-    <div class="num-item rv d3">
-      <div class="num-val"><span data-t="2026">0</span></div>
-      <div class="num-lbl">設立年</div>
-    </div>
-  </div>
-</div>
 
 <!-- SERVICES -->
 <section id="services">
